@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csi-occupancy"
+version = "0.2.0"
+description = "Deteksi okupansi ruang kelas dari CSI WiFi komoditas (ESP32-C6)"
+requires-python = ">=3.10"
+
+# Versi di-pin ke yang dipakai saat hasil di README dihasilkan (2026-09-19,
+# Python 3.12.2). Batas atas dipasang karena hasil numerik di skripsi harus bisa
+# direproduksi: perubahan minor di scipy/sklearn bisa menggeser angka di digit
+# terakhir, dan itu jadi pertanyaan yang tidak perlu saat sidang.
+dependencies = [
+    "numpy>=2.0,<3",
+    "pandas>=2.2,<3",
+    "scipy>=1.14,<2",
+    "scikit-learn>=1.5,<2",
+    "matplotlib>=3.9,<4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+notebook = [
+    "jupyter>=1.0",
+    "nbformat>=5.10",
+    "nbclient>=0.10",
+]
+
+# Sengaja TIDAK memakai [project.scripts]. Python di mesin ini terpasang
+# system-wide (C:\Python312), jadi pip tidak bisa menulis wrapper .exe ke
+# Scripts/ tanpa hak admin. `python -m csi_occupancy.<modul>` bekerja tanpa itu
+# dan sama portabelnya di mesin lain.
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+# Tandai tes yang butuh 1.4 GB data mentah, supaya bisa dilewati di mesin lain:
+#   pytest -m "not needs_data"
+markers = [
+    "needs_data: butuh data/raw/ lengkap (dilewati otomatis kalau tidak ada)",
+    "slow: baca .bin, hitungan menit",
+]

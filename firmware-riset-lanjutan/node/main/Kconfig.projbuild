@@ -1,0 +1,21 @@
+menu "CSI riset lanjutan"
+
+    config CSI_WIFI_SSID
+        string "SSID router"
+        default ""
+        help
+            Nama jaringan 2,4 GHz router yang dipakai board.
+
+    config CSI_WIFI_PASSWORD
+        string "Password Wi-Fi"
+        default ""
+        help
+            Tersimpan di sdkconfig dan hasil build. Jangan membagikan keduanya.
+
+    config CSI_COLLECTOR_IP
+        string "Alamat IP laptop kolektor"
+        default ""
+        help
+            Alamat laptop yang menjalankan csi_collector.py.
+
+endmenu

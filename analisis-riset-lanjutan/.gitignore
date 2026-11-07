@@ -1,0 +1,22 @@
+# Data mentah: tidak ikut, label CSV tetap ikut
+*.bin
+*.BIN
+
+# Turunan yang bisa dibuat ulang
+ml_people_count/data/processed/
+ml_localization/cache/
+*.npz
+*.joblib
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Editor
+.vscode/
+.DS_Store

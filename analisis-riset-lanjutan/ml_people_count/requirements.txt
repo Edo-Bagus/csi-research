@@ -1,0 +1,11 @@
+# Versi persis yang dipakai saat hasil di README dihasilkan (2026-09-19).
+# Python 3.12.2 di Windows 11.
+#
+# Untuk mereproduksi angka di skripsi, pakai versi ini. Untuk pengembangan
+# biasa, `pip install -e .` (rentang versinya di pyproject.toml) cukup.
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.16.3
+scikit-learn==1.8.0
+matplotlib==3.10.8
+joblib==1.5.2

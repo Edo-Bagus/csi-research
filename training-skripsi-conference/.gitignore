@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# Dataset dan hasil antara
+private-dataset/
+data/
+*.bin
+*.BIN
+*.npz
+*.zip
+
+# Keluaran training
+*.pt
+*.joblib
+train/**/*.json
+
+# Editor
+.vscode/
+.DS_Store

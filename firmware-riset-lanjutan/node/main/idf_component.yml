@@ -1,0 +1,5 @@
+## IDF Component Manager Manifest File
+## led_strip dihapus dari CSI_recv_v2 -- tidak ada kode LED di app_main.c.
+dependencies:
+  idf: ">=4.4.1"
+  esp_csi_gain_ctrl: ">=0.1.4"

@@ -1,0 +1,23 @@
+# Konfigurasi minimal RISET_CSI_2 (ESP32-C6, ESP-IDF 5.5.2).
+# Diekstrak dari sdkconfig CSI_recv_v2 yang sudah terbukti jalan.
+# Regenerasi penuh: hapus sdkconfig lalu `idf.py set-target esp32c6 build`.
+
+CONFIG_IDF_TARGET="esp32c6"
+
+# Offset partisi non-default -- WAJIB, bootloader ESP32-C6 mulai di 0x0.
+CONFIG_PARTITION_TABLE_OFFSET=0xa000
+
+# Inti fitur: tanpa ini esp_wifi_set_csi() gagal.
+CONFIG_ESP_WIFI_CSI_ENABLED=y
+
+# Buffer RX diperbesar. CSI HE20 = 512 int16/paket; buffer default terlalu
+# kecil dan menyebabkan paket ter-drop di driver sebelum sampai callback.
+CONFIG_ESP_WIFI_STATIC_RX_BUFFER_NUM=10
+CONFIG_ESP_WIFI_DYNAMIC_RX_BUFFER_NUM=128
+
+# Console 115200 -- cocok untuk mode log teks (RSSI) yang aktif sekarang.
+# Untuk mode capture biner naikkan ke 921600, lihat KNOWLEDGE.md.
+CONFIG_ESP_CONSOLE_UART_BAUDRATE=115200
+
+# Watchdog dilonggarkan: printf dari dalam callback WiFi bisa lama.
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=30

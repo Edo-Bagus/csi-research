@@ -1,0 +1,17 @@
+# ESP-IDF
+node/build/
+node/managed_components/
+node/sdkconfig
+node/sdkconfig.old
+
+# Python
+__pycache__/
+*.pyc
+
+# Hasil rekaman, label CSV tetap ikut
+*.bin
+*.BIN
+
+# Editor
+.vscode/
+.DS_Store

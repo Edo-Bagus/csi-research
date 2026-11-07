@@ -36,7 +36,6 @@ firmware-riset-lanjutan/
 | `tools/simulate_node.py` | Baris 33 dan 58 memakai MAC tiruan |
 | `backup/v1_tcp_batched_20260909/simulate_node.py` | Sama dengan di atas |
 | `backup/v1_tcp_batched_20260909/app_main.c` | Password, SSID, dan identitas laptop disamarkan |
-| `node/main/app_main_rssi_log.c.bak` | Password dan SSID disamarkan |
 | `docs/` | SSID, alamat laptop, dan MAC disamarkan di 4 dokumen |
 
 File lain disalin tanpa perubahan. `build/` tidak disertakan karena password ikut terkompilasi di dalamnya.

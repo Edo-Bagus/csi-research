@@ -36,7 +36,6 @@ firmware-riset-lanjutan/
 | `tools/simulate_node.py` | Lines 33 and 58 use a fake MAC |
 | `backup/v1_tcp_batched_20260909/simulate_node.py` | Same as above |
 | `backup/v1_tcp_batched_20260909/app_main.c` | Password, SSID, and laptop identity masked |
-| `node/main/app_main_rssi_log.c.bak` | Password and SSID masked |
 | `docs/` | SSID, laptop address, and MACs masked in 4 documents |
 
 All other files were copied without changes. `build/` is not included because the password is compiled into it.

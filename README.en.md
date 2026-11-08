@@ -8,12 +8,12 @@ The research has three phases. Phases 1 and 2 share the same data and firmware. 
 
 ## Repository contents
 
-| Folder | Contents | Phase | Status |
-|---|---|---|---|
-| [firmware-skripsi-conference](firmware-skripsi-conference/) | Firmware for two ESP32-C6 boards and UART recording tools | 1, 2 | Complete. Clean build tested, not re-tested on hardware |
-| [training-skripsi-conference](training-skripsi-conference/) | Training code and final results | 1, 2 | Partial. Feature extraction and training cannot run yet |
-| [firmware-riset-lanjutan](firmware-riset-lanjutan/) | Firmware for four ESP32-C6 boards, TCP recording tools, recordings | 3 | Temporary, not sorted yet. Clean build tested, not re-tested on hardware |
-| [analisis-riset-lanjutan](analisis-riset-lanjutan/) | Occupancy analysis, localization, and labels | 3 | Complete. Results were re-run successfully, but `.bin` files are required |
+| Folder | Contents | Phase |
+|---|---|---|
+| [firmware-skripsi-conference](firmware-skripsi-conference/) | Firmware for two ESP32-C6 boards and UART recording tools | 1, 2 |
+| [training-skripsi-conference](training-skripsi-conference/) | Training code and final results | 1, 2 |
+| [firmware-riset-lanjutan](firmware-riset-lanjutan/) | Firmware for four ESP32-C6 boards, TCP recording tools, recordings | 3 |
+| [analisis-riset-lanjutan](analisis-riset-lanjutan/) | Occupancy analysis, localization, and labels | 3 |
 
 Each folder has Indonesian and English READMEs, and its own `.gitignore`.
 

@@ -8,12 +8,12 @@ Riset ini terdiri dari tiga fase. Fase 1 dan 2 memakai data dan firmware yang sa
 
 ## Isi repo
 
-| Folder | Isi | Fase | Status |
-|---|---|---|---|
-| [firmware-skripsi-conference](firmware-skripsi-conference/) | Firmware dua ESP32-C6 dan alat rekam UART | 1, 2 | Lengkap. Build bersih teruji, belum diuji ulang di perangkat |
-| [training-skripsi-conference](training-skripsi-conference/) | Kode training dan hasil final | 1, 2 | Sebagian. Ekstraksi fitur dan training belum bisa dijalankan |
-| [firmware-riset-lanjutan](firmware-riset-lanjutan/) | Firmware empat ESP32-C6, alat rekam TCP, rekaman | 3 | Sementara, belum dipilah. Build bersih teruji, belum diuji ulang di perangkat |
-| [analisis-riset-lanjutan](analisis-riset-lanjutan/) | Analisis okupansi, lokalisasi, dan label | 3 | Lengkap. Hasilnya berhasil dijalankan ulang, tapi butuh file `.bin` |
+| Folder | Isi | Fase |
+|---|---|---|
+| [firmware-skripsi-conference](firmware-skripsi-conference/) | Firmware dua ESP32-C6 dan alat rekam UART | 1, 2 |
+| [training-skripsi-conference](training-skripsi-conference/) | Kode training dan hasil final | 1, 2 |
+| [firmware-riset-lanjutan](firmware-riset-lanjutan/) | Firmware empat ESP32-C6, alat rekam TCP, rekaman | 3 |
+| [analisis-riset-lanjutan](analisis-riset-lanjutan/) | Analisis okupansi, lokalisasi, dan label | 3 |
 
 Setiap folder punya README Indonesia dan Inggris, serta `.gitignore` sendiri.
 
